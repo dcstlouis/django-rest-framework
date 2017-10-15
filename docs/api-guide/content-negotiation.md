@@ -77,7 +77,7 @@ The default content negotiation class may be set globally, using the `DEFAULT_CO
         'DEFAULT_CONTENT_NEGOTIATION_CLASS': 'myapp.negotiation.IgnoreClientContentNegotiation',
     }
 
-You can also set the content negotiation used for an individual view, or viewset, using the `APIView` class-based views.
+You can also set the content negotiation used for an individual view, or viewset, using the [`APIView`][apiview] class-based views.
 
 	from myapp.negotiation import IgnoreClientContentNegotiation
     from rest_framework.response import Response
@@ -95,3 +95,4 @@ You can also set the content negotiation used for an individual view, or viewset
             })
 
 [accept-header]: http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html
+[apiview]: views.md

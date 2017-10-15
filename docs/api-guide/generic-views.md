@@ -11,7 +11,7 @@ One of the key benefits of class-based views is the way they allow you to compos
 
 The generic views provided by REST framework allow you to quickly build API views that map closely to your database models.
 
-If the generic views don't suit the needs of your API, you can drop down to using the regular `APIView` class, or reuse the mixins and base classes used by the generic views to compose your own set of reusable generic views.
+If the generic views don't suit the needs of your API, you can drop down to using the regular [`APIView`][apiview] class, or reuse the mixins and base classes used by the generic views to compose your own set of reusable generic views.
 
 ## Examples
 
@@ -50,7 +50,7 @@ For very simple cases you might want to pass through any class attributes using 
 
 ## GenericAPIView
 
-This class extends REST framework's `APIView` class, adding commonly required behavior for standard list and detail views.
+This class extends REST framework's [`APIView`][apiview] class, adding commonly required behavior for standard list and detail views.
 
 Each of the concrete generic views provided is built by combining `GenericAPIView`, with one or more mixin classes.
 
@@ -385,6 +385,7 @@ The [django-rest-framework-bulk package][django-rest-framework-bulk] implements 
 
 
 [cite]: https://docs.djangoproject.com/en/stable/ref/class-based-views/#base-vs-generic-views
+[apiview]: views.md
 [GenericAPIView]: #genericapiview
 [ListModelMixin]: #listmodelmixin
 [CreateModelMixin]: #createmodelmixin

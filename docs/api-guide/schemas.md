@@ -158,7 +158,7 @@ Basic usage is just to provide the title for your schema and call
 ## Per-View Schema Customisation
 
 By default, view introspection is performed by an `AutoSchema` instance
-accessible via the `schema` attribute on `APIView`. This provides the
+accessible via the `schema` attribute on [`APIView`][apiview]. This provides the
 appropriate Core API `Link` object for the view, request method and path:
 
     auto_schema = view.schema
@@ -444,7 +444,7 @@ These descriptions will be based on:
 
 ## Examples
 
-An `APIView`, with an explicit method docstring.
+An [`APIView`][apiview], with an explicit method docstring.
 
     class ListUsernames(APIView):
         def get(self, request):
@@ -535,7 +535,7 @@ as you can build a new dictionary with a different layout.
 
 A class that deals with introspection of individual views for schema generation.
 
-`AutoSchema` is attached to `APIView` via the `schema` attribute.
+`AutoSchema` is attached to [`APIView`][apiview] via the `schema` attribute.
 
 The `AutoSchema` constructor takes a single keyword argument  `manual_fields`.
 
@@ -783,5 +783,6 @@ in [OpenAPI][open-api] format.
 [json-hyperschema]: http://json-schema.org/latest/json-schema-hypermedia.html
 [api-blueprint]: https://apiblueprint.org/
 [static-files]: https://docs.djangoproject.com/en/stable/howto/static-files/
+[apiview]: views.md
 [named-arguments]: https://docs.djangoproject.com/en/stable/topics/http/urls/#named-groups
  

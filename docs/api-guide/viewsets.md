@@ -165,7 +165,7 @@ The two new actions will then be available at the urls `^users/{pk}/set_password
 
 ## ViewSet
 
-The `ViewSet` class inherits from `APIView`.  You can use any of the standard attributes such as `permission_classes`, `authentication_classes` in order to control the API policy on the viewset.
+The `ViewSet` class inherits from [`APIView`][apiview].  You can use any of the standard attributes such as `permission_classes`, `authentication_classes` in order to control the API policy on the viewset.
 
 The `ViewSet` class does not provide any implementations of actions.  In order to use a `ViewSet` class you'll override the class and define the action implementations explicitly.
 
@@ -252,4 +252,5 @@ To create a base viewset class that provides `create`, `list` and `retrieve` ope
 By creating your own base `ViewSet` classes, you can provide common behavior that can be reused in multiple viewsets across your API.
 
 [cite]: http://guides.rubyonrails.org/routing.html
+[apiview]: views.md
 [routers]: routers.md

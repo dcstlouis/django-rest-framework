@@ -71,7 +71,7 @@ If not specified, this setting defaults to allowing unrestricted access:
     )
 
 You can also set the authentication policy on a per-view, or per-viewset basis,
-using the `APIView` class-based views.
+using the [`APIView`][apiview] class-based views.
 
     from rest_framework.permissions import IsAuthenticated
     from rest_framework.response import Response
@@ -86,7 +86,7 @@ using the `APIView` class-based views.
             }
             return Response(content)
 
-Or, if you're using the `@api_view` decorator with function based views.
+Or, if you're using the [`@api_view`][apiview] decorator with function based views.
 
     from rest_framework.decorators import api_view, permission_classes
     from rest_framework.permissions import IsAuthenticated
@@ -273,6 +273,7 @@ The [Django Rest Framework API Key][django-rest-framework-api-key] package allow
 [authentication]: authentication.md
 [throttling]: throttling.md
 [filtering]: filtering.md
+[apiview]: views.md
 [contribauth]: https://docs.djangoproject.com/en/stable/topics/auth/customizing/#custom-permissions
 [objectpermissions]: https://docs.djangoproject.com/en/stable/topics/auth/customizing/#handling-object-permissions
 [guardian]: https://github.com/lukaszb/django-guardian
