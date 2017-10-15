@@ -12,7 +12,7 @@ The `Response` class subclasses Django's `SimpleTemplateResponse`.  `Response` o
 
 There's no requirement for you to use the `Response` class, you can also return regular `HttpResponse` or `StreamingHttpResponse` objects from your views if required.  Using the `Response` class simply provides a nicer interface for returning content-negotiated Web API responses, that can be rendered to multiple formats.
 
-Unless you want to heavily customize REST framework for some reason, you should always use an `APIView` class or `@api_view` function for views that return `Response` objects.  Doing so ensures that the view can perform content negotiation and select the appropriate renderer for the response, before it is returned from the view.
+Unless you want to heavily customize REST framework for some reason, you should always use an [`APIView`][apiview] class or [`@api_view`][apiview] function for views that return `Response` objects.  Doing so ensures that the view can perform content negotiation and select the appropriate renderer for the response, before it is returned from the view.
 
 ---
 
@@ -60,19 +60,19 @@ The `template_name`, if supplied.  Only required if `HTMLRenderer` or some other
 
 The renderer instance that will be used to render the response.
 
-Set automatically by the `APIView` or `@api_view` immediately before the response is returned from the view.
+Set automatically by the [`APIView`][apiview] or [`@api_view`][apiview] immediately before the response is returned from the view.
 
 ## .accepted_media_type
 
 The media type that was selected by the content negotiation stage.
 
-Set automatically by the `APIView` or `@api_view` immediately before the response is returned from the view.
+Set automatically by the [`APIView`][apiview] or [`@api_view`][apiview] immediately before the response is returned from the view.
 
 ## .renderer_context
 
 A dictionary of additional context information that will be passed to the renderer's `.render()` method.
 
-Set automatically by the `APIView` or `@api_view` immediately before the response is returned from the view.
+Set automatically by the [`APIView`][apiview] or [`@api_view`][apiview] immediately before the response is returned from the view.
 
 ---
 
@@ -92,4 +92,5 @@ As with any other `TemplateResponse`, this method is called to render the serial
 You won't typically need to call `.render()` yourself, as it's handled by Django's standard response cycle.
 
 [cite]: https://docs.djangoproject.com/en/stable/stable/template-response/
+[apiview]: views.md
 [statuscodes]: status-codes.md
