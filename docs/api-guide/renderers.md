@@ -28,7 +28,7 @@ The default set of renderers may be set globally, using the `DEFAULT_RENDERER_CL
     }
 
 You can also set the renderers used for an individual view, or viewset,
-using the `APIView` class-based views.
+using the [`APIView`][apiview] class-based views.
 
     from django.contrib.auth.models import User
     from rest_framework.renderers import JSONRenderer
@@ -46,7 +46,7 @@ using the `APIView` class-based views.
             content = {'user_count': user_count}
             return Response(content)
 
-Or, if you're using the `@api_view` decorator with function based views.
+Or, if you're using the [`@api_view`][apiview] decorator with function based views.
 
     @api_view(['GET'])
     @renderer_classes((JSONRenderer,))
@@ -480,6 +480,7 @@ Comma-separated values are a plain-text tabular data format, that can be easily 
 
 [cite]: https://docs.djangoproject.com/en/stable/stable/template-response/#the-rendering-process
 [conneg]: content-negotiation.md
+[apiview]: views.md
 [html-and-forms]: ../topics/html-and-forms.md
 [browser-accept-headers]: http://www.gethifi.com/blog/browser-rest-http-accept-headers
 [testing]: testing.md

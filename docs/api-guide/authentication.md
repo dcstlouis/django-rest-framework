@@ -44,7 +44,7 @@ The default authentication schemes may be set globally, using the `DEFAULT_AUTHE
     }
 
 You can also set the authentication scheme on a per-view or per-viewset basis,
-using the `APIView` class-based views.
+using the [`APIView`][apiview] class-based views.
 
     from rest_framework.authentication import SessionAuthentication, BasicAuthentication
     from rest_framework.permissions import IsAuthenticated
@@ -62,7 +62,7 @@ using the `APIView` class-based views.
             }
             return Response(content)
 
-Or, if you're using the `@api_view` decorator with function based views.
+Or, if you're using the [`@api_view`][apiview] decorator with function based views.
 
     @api_view(['GET'])
     @authentication_classes((SessionAuthentication, BasicAuthentication))
@@ -403,6 +403,7 @@ HTTP Signature (currently a [IETF draft][http-signature-ietf-draft]) provides a 
 [basicauth]: http://tools.ietf.org/html/rfc2617
 [oauth]: http://oauth.net/2/
 [permission]: permissions.md
+[apiview]: views.md
 [throttling]: throttling.md
 [csrf-ajax]: https://docs.djangoproject.com/en/stable/ref/csrf/#ajax
 [mod_wsgi_official]: http://code.google.com/p/modwsgi/wiki/ConfigurationDirectives#WSGIPassAuthorization

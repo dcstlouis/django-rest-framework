@@ -36,7 +36,7 @@ The `api_settings` object will check for any user-defined settings, and otherwis
 
 ## API policy settings
 
-*The following settings control the basic API policies, and are applied to every `APIView` class-based view, or `@api_view` function based view.*
+*The following settings control the basic API policies, and are applied to every [`APIView`][apiview] class-based view, or [`@api_view`][apiview] function based view.*
 
 #### DEFAULT_RENDERER_CLASSES
 
@@ -465,6 +465,7 @@ An integer of 0 or more, that may be used to specify the number of application p
 Default: `None`
 
 [cite]: https://www.python.org/dev/peps/pep-0020/
+[apiview]: views.md
 [rfc4627]: http://www.ietf.org/rfc/rfc4627.txt
 [heroku-minified-json]: https://github.com/interagent/http-api-design#keep-json-minified-in-all-responses
 [strftime]: https://docs.python.org/3/library/time.html#time.strftime

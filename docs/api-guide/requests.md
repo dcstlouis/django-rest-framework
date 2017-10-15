@@ -32,13 +32,13 @@ For clarity inside your code, we recommend using `request.query_params` instead 
 
 ## .parsers
 
-The `APIView` class or `@api_view` decorator will ensure that this property is automatically set to a list of `Parser` instances, based on the `parser_classes` set on the view or based on the `DEFAULT_PARSER_CLASSES` setting.
+The [`APIView`][apiview] class or [`@api_view`][apiview] decorator will ensure that this property is automatically set to a list of `Parser` instances, based on the `parser_classes` set on the view or based on the `DEFAULT_PARSER_CLASSES` setting.
 
 You won't typically need to access this property.
 
 ---
 
-**Note:** If a client sends malformed content, then accessing `request.data` may raise a `ParseError`.  By default REST framework's `APIView` class or `@api_view` decorator will catch the error and return a `400 Bad Request` response.
+**Note:** If a client sends malformed content, then accessing `request.data` may raise a `ParseError`.  By default REST framework's [`APIView`][apiview] class or [`@api_view`][apiview] decorator will catch the error and return a `400 Bad Request` response.
 
 If a client sends a request with a content-type that cannot be parsed then a `UnsupportedMediaType` exception will be raised, which by default will be caught and return a `415 Unsupported Media Type` response.
 
@@ -84,7 +84,7 @@ For more details see the [authentication documentation].
 
 ## .authenticators
 
-The `APIView` class or `@api_view` decorator will ensure that this property is automatically set to a list of `Authentication` instances, based on the `authentication_classes` set on the view or based on the `DEFAULT_AUTHENTICATORS` setting.
+The [`APIView`][apiview] class or [`@api_view`][apiview] decorator will ensure that this property is automatically set to a list of `Authentication` instances, based on the `authentication_classes` set on the view or based on the `DEFAULT_AUTHENTICATORS` setting.
 
 You won't typically need to access this property.
 
@@ -129,5 +129,6 @@ Note that due to implementation reasons the `Request` class does not inherit fro
 
 [cite]: https://groups.google.com/d/topic/django-developers/dxI4qVzrBY4/discussion
 [parsers documentation]: parsers.md
+[apiview]: views.md
 [authentication documentation]: authentication.md
 [browser enhancements documentation]: ../topics/browser-enhancements.md
