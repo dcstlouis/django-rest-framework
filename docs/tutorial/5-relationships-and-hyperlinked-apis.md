@@ -4,7 +4,7 @@ At the moment relationships within our API are represented by using primary keys
 
 ## Creating an endpoint for the root of our API
 
-Right now we have endpoints for 'snippets' and 'users', but we don't have a single entry point to our API.  To create one, we'll use a regular function-based view and the `@api_view` decorator we introduced earlier. In your `snippets/views.py` add:
+Right now we have endpoints for 'snippets' and 'users', but we don't have a single entry point to our API.  To create one, we'll use a regular function-based view and the [`@api_view`][apiview] decorator we introduced earlier. In your `snippets/views.py` add:
 
     from rest_framework.decorators import api_view
     from rest_framework.response import Response
@@ -158,4 +158,5 @@ You'll also be able to see the 'highlight' links on the snippet instances, that 
 
 In [part 6][tut-6] of the tutorial we'll look at how we can use ViewSets and Routers to reduce the amount of code we need to build our API.
 
+[apiview]: ../api-guide/views.md
 [tut-6]: 6-viewsets-and-routers.md
